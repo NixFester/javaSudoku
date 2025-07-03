@@ -1,0 +1,70 @@
+.main {
+    -fx-background-color: #FF6B6B;
+}
+
+.progress-bar .track {
+    -fx-background-color :  #FF6B6B;
+}
+
+.progress-bar .bar {
+    -fx-background-color : #F7FFF7;
+}
+
+.progress-bar {
+    -fx-border-color : #F7FFF7;
+}
+
+
+.defBorder {
+    -fx-background-color :  #FF6B6B;
+    -fx-text-fill : #F7FFF7;
+    -fx-border-color: #F7FFF7;
+}
+
+.firstBorder {
+    -fx-border-style:  hidden solid solid hidden;
+    -fx-border-width:  1.2px;
+}
+
+.secondBorder{
+    -fx-border-style:  hidden solid solid hidden;
+    -fx-border-width:  0px 2.5px 1.2px 0px;
+}
+
+.thirdBorder {
+    -fx-border-style:  hidden solid solid hidden;
+    -fx-border-width:  0px 1.2px 2.5px 0px;
+}
+
+.brBorder {
+    -fx-border-style:  hidden solid solid hidden;
+    -fx-border-width:  0px 2.5px 2.5px 0px;
+}
+
+.noBorder {
+    -fx-border-style:  hidden solid hidden hidden;
+    -fx-border-width:  1.2px;
+}
+
+.noRightBorder {
+    -fx-border-style:  hidden hidden solid hidden;
+    -fx-border-width:  1.2px;
+}
+
+.nobrBorder {
+    -fx-border-style:  hidden solid hidden hidden;
+    -fx-border-width:  2.5px;
+}
+.onlyBottomBorder{
+    -fx-border-style:  hidden hidden solid hidden;
+    -fx-border-width:  2.5px;
+}
+
+.button {
+    -fx-background-color:  #FF6B6B;
+    -fx-text-fill : #F7FFF7;
+}
+
+.hiddenStyle {
+    -fx-border-style: hidden;
+}

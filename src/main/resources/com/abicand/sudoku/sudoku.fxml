@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:controller="com.abicand.sudoku.PrimaryController" stylesheets="@sudoku.css" prefHeight="438.0" prefWidth="344.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <AnchorPane prefHeight="430.0" prefWidth="344.0" styleClass="main" stylesheets="@sudoku.css">
+         <children>
+            <GridPane fx:id="papanSudoku" layoutX="16.0" layoutY="30.0" prefHeight="318.0" prefWidth="313.0" stylesheets="@sudoku.css" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="30.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                    <TextField fx:id="sudoku00" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku01" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku02" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku03" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku04" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku05" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="0">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku06" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="0">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku07" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="0">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku08" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="8" GridPane.rowIndex="0">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noRightBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku10" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku11" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku12" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku13" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku14" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku15" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku16" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku17" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku18" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="8" GridPane.rowIndex="1">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noRightBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku20" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku21" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku22" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="brBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku23" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku24" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku25" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="brBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku26" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku27" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku28" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="onlyBottomBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku30" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku31" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku32" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku33" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku34" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku35" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku36" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku37" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku38" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="8" GridPane.rowIndex="3">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noRightBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku40" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="0" GridPane.rowIndex="4">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku41" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku42" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku43" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku44" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku45" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku46" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku47" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku48" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="8" GridPane.rowIndex="4">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noRightBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku50" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="0" GridPane.rowIndex="5">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku51" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku52" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="brBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku53" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku54" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku55" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="brBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku56" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="5">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku57" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="5">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="thirdBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku58" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="8" GridPane.rowIndex="5">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="onlyBottomBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku60" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="0" GridPane.rowIndex="6">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku61" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku62" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku63" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku64" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku65" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku66" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="6">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku67" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="6">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku68" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="8" GridPane.rowIndex="6">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noRightBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku70" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="0" GridPane.rowIndex="7">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku71" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku72" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku73" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku74" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="7">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku75" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="7">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="secondBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku76" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="7">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku77" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="7">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku78" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="8" GridPane.rowIndex="7">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noRightBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku80" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="0" GridPane.rowIndex="8">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku81" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku82" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="nobrBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku83" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku84" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="8">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku85" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="8">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="nobrBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku86" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="8">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku87" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="8">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="noBorder" />
+	</styleClass>
+</TextField>
+<TextField fx:id="sudoku88" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="71.0" style="-fx-border-style: hidden;" stylesheets="@sudoku.css" text="0" GridPane.columnIndex="8" GridPane.rowIndex="8">
+	<effect>
+		<Blend />
+	</effect>
+	<styleClass>
+		<String fx:value="defBorder" />
+		<String fx:value="firstBorder" />
+	</styleClass>
+</TextField>
+               </children>
+            </GridPane>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="50.0" layoutX="19.0" layoutY="371.0" prefHeight="67.0" prefWidth="313.0" stylesheets="@sudoku.css">
+               <children>
+                  <Button fx:id="ulangBtn" mnemonicParsing="false" stylesheets="@sudoku.css" text="Mulai!" />
+                  <Button fx:id="cekBtn" mnemonicParsing="false" stylesheets="@sudoku.css" text="Cek" />
+                  <FlowPane prefHeight="37.0" prefWidth="60.0">
+                     <children>
+                        <ProgressBar fx:id="skorProgress" prefHeight="20.0" prefWidth="98.0" progress="0.0" style="-fx-border-style: solid; -fx-background-color: #FF6B6B; -fx-text-fill: #F7FFF7;" />
+                        <Label fx:id="labelSkor" prefHeight="16.0" prefWidth="99.0" stylesheets="@sudoku.css" text="Skor: 0" textAlignment="CENTER" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </FlowPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
