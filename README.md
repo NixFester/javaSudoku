@@ -1,46 +1,95 @@
-# ID
+# 🧩 Sudoku in Java | 🇮🇩 Sudoku dalam Java
 
-# Sudoku di Java
-Sebuah permainan Sudoku yang dibuat dengan Java dan JavaFX.
+A fully playable Sudoku game built with **Java** and **JavaFX**.  
+Sebuah game Sudoku yang sepenuhnya dapat dimainkan, dibuat menggunakan **Java** dan **JavaFX**.
 
-## Fitur
-- Skor dan progress bar yang akan terisi berdasarkan jumlah angka yang benar
-- Fitur untuk memeriksa berapa banyak angka yang benar
-- Tombol untuk mengulang dan mengganti papan Sudoku secara acak
+---
 
-## Tangkapan Layar
-- **Tampilan Utama**  
-  ![tampilan](Sudoku.png)
+## ✨ Features | Fitur
 
-- **Tampilan Sebelum Memulai**  
-  ![tampilan](Sudoku1.png)
+**EN:**
+- ✅ Dynamic score and progress bar based on the number of correct digits
+- 🔎 "Check" feature to verify correctly placed numbers
+- 🎲 "Restart" button to reset and randomize the Sudoku board
+- 🎨 Clean UI styled with CSS and FXML views
 
-- **Tampilan Setelah Memulai**  
-  ![tampilan](Sudoku2.png)
+**ID:**
+- ✅ Skor dan progress bar yang mengisi berdasarkan jumlah angka yang benar
+- 🔎 Tombol "Check" untuk memeriksa angka yang ditempatkan dengan benar
+- 🎲 Tombol "Restart" untuk mengacak dan mengulang papan Sudoku
+- 🎨 Antarmuka rapi dengan styling dari CSS dan FXML
 
-- **Tampilan Setelah Pengecekan**  
-  ![tampilan](Sudokucek.png)
+---
 
+## 📸 Screenshots
 
-# EN
-# Sudoku in Java
-A Sudoku game built using Java and JavaFX.
+- **Main Interface / Tampilan Utama**  
+  ![Main UI](Sudoku.png)
 
-## Features
-- Score and progress bar that fill based on the number of correct digits
-- Check how many numbers are correctly placed
-- Button to restart and randomize the Sudoku board
+- **Before Starting / Sebelum Memulai**  
+  ![Before Start](Sudoku1.png)
 
-## Screenshots
-- **Main Interface**  
-  ![screenshot](Sudoku.png)
+- **After Starting / Setelah Memulai**  
+  ![After Start](Sudoku2.png)
 
-- **Before Starting**  
-  ![screenshot](Sudoku1.png)
+- **After Checking / Setelah Diperiksa**  
+  ![After Check](Sudokucek.png)
 
-- **After Starting**  
-  ![screenshot](Sudoku2.png)
+---
 
-- **After Checking**  
-  ![screenshot](Sudokucek.png)
+## 🛠 Built With | Dibuat Dengan
 
+- Java 11+
+- JavaFX 13
+- Maven (`javafx-maven-plugin`)
+- FXML untuk layout
+- CSS untuk styling
+
+---
+
+## 📦 How to Build & Run | Cara Build dan Menjalankan
+
+**EN:**
+
+# Clone the repo
+git clone https://github.com/yourusername/sudoku-javafx.git
+cd sudoku-javafx
+
+# Build the project
+mvn clean package
+
+# Run the app
+mvn javafx:run
+
+**ID:**
+
+# Clone repositori
+git clone https://github.com/yourusername/sudoku-javafx.git
+cd sudoku-javafx
+
+# Build proyek
+mvn clean package
+
+# Jalankan aplikasi
+mvn javafx:run
+
+    💡 If you want to run the JAR manually, make sure to include JavaFX on the module path.
+    💡 Jika ingin menjalankan file JAR secara manual, pastikan sudah menyertakan JavaFX di module path.
+
+📁 Project Structure | Struktur Proyek
+
+src/
+├── main/
+│   ├── java/
+│   │   └── com.abicand.sudoku/
+│   │       ├── App.java
+│   │       ├── SudokuGen.java
+│   │       ├── PrimaryController.java
+│   │       └── SecondaryController.java
+│   └── resources/
+│       └── com.abicand.sudoku/
+│           ├── sudoku.fxml
+│           ├── primary.fxml
+│           ├── secondary.fxml
+│           └── sudoku.css
+└── module-info.java
