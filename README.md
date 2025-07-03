@@ -27,13 +27,13 @@ Sebuah game Sudoku yang sepenuhnya dapat dimainkan, dibuat menggunakan **Java** 
   ![Main UI](Sudoku.png)
 
 - **Before Starting / Sebelum Memulai**  
-  ![Before Start](Sudoku1.png)
+  ![Before Start](sudoku1.png)
 
 - **After Starting / Setelah Memulai**  
-  ![After Start](Sudoku2.png)
+  ![After Start](sudoku2.png)
 
 - **After Checking / Setelah Diperiksa**  
-  ![After Check](Sudokucek.png)
+  ![After Check](sudokucek.png)
 
 ---
 
