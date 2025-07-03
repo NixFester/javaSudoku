@@ -50,7 +50,7 @@ Sebuah game Sudoku yang sepenuhnya dapat dimainkan, dibuat menggunakan **Java** 
 ## 📦 How to Build & Run | Cara Build dan Menjalankan
 
 **EN:**
-
+```bash
 # Clone the repo
 git clone https://github.com/yourusername/sudoku-javafx.git
 cd sudoku-javafx
@@ -60,9 +60,10 @@ mvn clean package
 
 # Run the app
 mvn javafx:run
+```
 
 **ID:**
-
+```bash
 # Clone repositori
 git clone https://github.com/yourusername/sudoku-javafx.git
 cd sudoku-javafx
@@ -72,12 +73,16 @@ mvn clean package
 
 # Jalankan aplikasi
 mvn javafx:run
+```
 
-    💡 If you want to run the JAR manually, make sure to include JavaFX on the module path.
-    💡 Jika ingin menjalankan file JAR secara manual, pastikan sudah menyertakan JavaFX di module path.
+💡 *If you want to run the JAR manually, make sure to include JavaFX on the module path.*  
+💡 *Jika ingin menjalankan file JAR secara manual, pastikan sudah menyertakan JavaFX di module path.*
 
-📁 Project Structure | Struktur Proyek
+---
 
+## 📁 Project Structure | Struktur Proyek
+
+```
 src/
 ├── main/
 │   ├── java/
@@ -93,3 +98,4 @@ src/
 │           ├── secondary.fxml
 │           └── sudoku.css
 └── module-info.java
+```
